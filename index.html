@@ -209,7 +209,7 @@
           <h2 class="text-body-emphasis mb-4">Server Search</h2>
 
           <div class="input-group input-group-lg mb-4">
-            <span class="input-group-text text-secondary" id="inputGroup-sizing-lg">#</span>
+            <span class="input-group-text text-secondary" id="inputGroup-sizing-lg">Keyword</span>
             <input type="text" class="form-control" aria-label="searchboxInput" aria-describedby="inputGroup-sizing-lg"
               oninput="checkValues()" onclick="checkValues()" id="searchboxInput">
           </div>
@@ -245,7 +245,7 @@
 
       if ($('#searchboxInput').val().length === 0) {
 
-        $("#inputGroup-sizing-lg").html("#");
+        $("#inputGroup-sizing-lg").html("Keyword");
 
       } else if ($('#searchboxInput').val().length < 4) {
 
@@ -293,7 +293,7 @@
 
           });
 
-          $("#inputGroup-sizing-lg").html("#");
+          $("#inputGroup-sizing-lg").html("Keyword");
           setTimeout(function(){$("#recommendedServerButton").removeClass('disabled');},4000);
 
         }
@@ -342,7 +342,7 @@
                 var item = "<span class='alert alert-warning' role='alert'>No Results</span>";
                 $("#searchResult").append(item);
 
-                $("#inputGroup-sizing-lg").html("#");
+                $("#inputGroup-sizing-lg").html("Keyword");
 
               }
             }
