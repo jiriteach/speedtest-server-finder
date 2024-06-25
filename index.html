@@ -210,9 +210,9 @@
           <div class="input-group input-group-lg mb-4">
             <span class="input-group-text text-secondary" id="inputGroup-sizing-lg">#</span>
             <input type="text" class="form-control" aria-label="searchboxInput" aria-describedby="inputGroup-sizing-lg"
-              id="searchboxInput">
+              oninput="checkValues()" onclick="checkValues()" id="searchboxInput">
           </div>
-          
+
           <ul class="list-group list-group-flush" id="searchResult">
           </ul>
 
@@ -234,17 +234,40 @@
 
   <script>
 
+    function checkValues() {
+
+      $("#headerSection").hide();
+      $("#searchResult").html("");
+
+      if ($('#searchboxInput').val().length === 0) {
+
+        $("#inputGroup-sizing-lg").html("#");
+
+      } else if ($('#searchboxInput').val().length < 4) {
+
+        $("#inputGroup-sizing-lg").html("Waiting ...");
+
+        var item = "<span class='alert alert-warning' role='alert'>Min 3 Letters Required ... </span>";
+        $("#searchResult").append(item);
+
+      } else {
+        $("#inputGroup-sizing-lg").html("Searching ...");
+      }
+
+    }
+
     function runSearch() {
 
       $("#headerSection").show();
+
       $('#searchboxInput').val("");
 
       $("#searchResult").html("");
       $("#inputGroup-sizing-lg").html("Searching ...");
       $("#recommendedServer").html("Searching ...");
 
-
       let serversUrl = "https://www.speedtest.net/api/js/servers?engine=js&https_functional=false&limit=10";
+
       $.ajax({
         crossDomain: true,
         dataType: 'jsonp',
@@ -272,18 +295,19 @@
 
       $("#headerSection").hide();
 
-      $("#searchboxInput").keydown(function () {
+      // $("#searchboxInput").keydown(function () {
 
-        $("#searchResult").html("");
-        $("#inputGroup-sizing-lg").html("Finding ...");
+      //   $("#searchResult").html("");
 
-        $("#headerSection").hide();
+      //   $("#inputGroup-sizing-lg").html("Searching ...");
 
-      });
+      //   $("#headerSection").hide();
+
+      // });
 
       $('#searchboxInput').autocomplete({
         source: performSearch,
-        minLength: 3,
+        minLength: 4,
         delay: 1000
       });
 
@@ -311,20 +335,22 @@
 
                 });
 
+                $("#inputGroup-sizing-lg").html("Results");
+
               } else {
 
-                var item = "<li class='list-group-item alert alert-warning'>No Results</li>";
+                var item = "<span class='alert alert-warning' role='alert'>No Results</span>";
                 $("#searchResult").append(item);
+
+                $("#inputGroup-sizing-lg").html("#");
+
 
               }
 
-              $("#inputGroup-sizing-lg").html("#");
 
             }
           })
         }
-
-        $("#displayHeader").html("Results ... ");
       }
     }
 
