@@ -15,6 +15,8 @@ Allows searching based on a `keyword` and provides a list of the `top 10` result
 - minimum 3 letters or more required for a search.
 
 ## Disclaimer
-Not associated with Ookla.
+```
+Not associated with Ookla
+```
 
-Built for educational purposes as part of learning the `Bootstrap` framework - https://getbootstrap.com/.
+Built for educational purposes as part of learning the `Bootstrap` framework - https://getbootstrap.com/ and `Cloudflare Pages` - https://pages.cloudflare.com/.
