@@ -213,6 +213,7 @@
               oninput="checkValues()" onclick="checkValues()" id="searchboxInput">
           </div>
 
+          <div id="otherRecommendedServer" class="alert alert-light mt-3">Other Recommended Servers</div>
           <ul class="list-group list-group-flush" id="searchResult">
           </ul>
 
@@ -237,6 +238,8 @@
     function checkValues() {
 
       $("#headerSection").hide();
+      $("#otherRecommendedServer").hide();
+
       $("#searchResult").html("");
 
       if ($('#searchboxInput').val().length === 0) {
@@ -259,10 +262,12 @@
     function runSearch() {
 
       $("#headerSection").show();
+      $("#otherRecommendedServer").show();
 
       $('#searchboxInput').val("");
 
       $("#searchResult").html("");
+
       $("#inputGroup-sizing-lg").html("Searching ...");
       $("#recommendedServer").html("Searching ...");
 
@@ -294,16 +299,7 @@
     $(document).ready(function () {
 
       $("#headerSection").hide();
-
-      // $("#searchboxInput").keydown(function () {
-
-      //   $("#searchResult").html("");
-
-      //   $("#inputGroup-sizing-lg").html("Searching ...");
-
-      //   $("#headerSection").hide();
-
-      // });
+      $("#otherRecommendedServer").hide();
 
       $('#searchboxInput').autocomplete({
         source: performSearch,
@@ -344,17 +340,12 @@
 
                 $("#inputGroup-sizing-lg").html("#");
 
-
               }
-
-
             }
           })
         }
       }
-    }
-
-    );
+    });
 
   </script>
 
