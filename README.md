@@ -6,10 +6,15 @@ For use with `Speedtest Tracker` - https://github.com/alexjustesen/speedtest-tra
 
 Easier approach then using `speedtest-cli` to find recommended servers or the `server id` of a speedtest server.
 
-`Recommend Servers` - provides a `top 10` list of servers as recommended by Oooka based on your IP address and provider.
+## Recommend Servers
+Provides a `top 10` list of servers as recommended by Oooka based on your IP address and provider.
 
-`Server Search` - allows searching based on a `keyword` and provides a list of the `top 10` results. 
+## Server Search
+Allows searching based on a `keyword` and provides a list of the `top 10` results. 
 - `keyword` - can include a `provider` or `city` or `country`.
 - minimum 3 letters or more required for a search.
 
--- Not associated with Ookla. Built for educational purposes as part of learning the `Bootstrap` framework - https://getbootstrap.com/.
+## Disclaimer
+Not associated with Ookla.
+
+Built for educational purposes as part of learning the `Bootstrap` framework - https://getbootstrap.com/.
