@@ -223,9 +223,9 @@
       </div>
     </main>
 
-    <!-- <footer class="pt-1 my-2 text-secondary">
-      ... 
-    </footer> -->
+    <footer class="pt-1 my-2 text-secondary">
+      <a href="https://github.com/jiriteach/speedtest-server-finder">https://github.com/jiriteach/speedtest-server-finder</a>
+    </footer>
 
   </div>
 
@@ -330,7 +330,9 @@
 
                 $.each(jsondata, function (i, item) {
 
-                  var item = "<li class='list-group-item'>" + item.sponsor.replace(".", "") + " - " + item.id + " - " + item.name + "</li>";
+                  var hostname = item.host.split(':')[0];
+
+                  var item = "<li class='list-group-item'>" + item.sponsor.replace(".", "") + " - " + item.id + " - " + item.name + " (" + hostname + ")</li>";
                   $("#searchResult").append(item);
 
                 });
