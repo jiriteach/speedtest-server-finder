@@ -286,8 +286,10 @@
 
           $.each(jsondata, function (i, item) {
 
+            var hostname = item.host.split(':')[0];
+
             if (i !== 0) {
-              var item = "<li class='list-group-item'>" + item.sponsor.replace(".", "") + " - " + item.id + " - " + item.name + "</li>";
+              var item = "<li class='list-group-item'>" + item.sponsor.replace(".", "") + " - " + item.id + " - " + item.name + " (" + hostname + ")</li>";
               $("#searchResult").append(item);
             }
 
@@ -356,5 +358,4 @@
   </script>
 
 </body>
-
 </html>
