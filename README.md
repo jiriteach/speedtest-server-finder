@@ -6,6 +6,9 @@ For use with `Speedtest Tracker` - https://github.com/alexjustesen/speedtest-tra
 
 Easier approach then using `speedtest-cli` to find recommended servers or the `server id` of a speedtest server.
 
+## Working Example
+https://speedtest-server-finder.se7en.co.nz/
+
 ## Recommend Servers
 Provides a `top 10` list of servers as recommended by Oooka based on your IP address and provider.
 

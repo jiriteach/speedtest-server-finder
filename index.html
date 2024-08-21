@@ -97,7 +97,7 @@
 </head>
 
 <body>
-  
+
   <!-- <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path
@@ -196,7 +196,8 @@
     <main>
 
       <div class="mb-4">
-        <a href="javascript:runSearch();" id="recommendedServerButton" class="btn btn-info btn-lg px-4">Recommend Servers</a>
+        <a href="javascript:runSearch();" id="recommendedServerButton" class="btn btn-info btn-lg px-4">Recommend
+          Servers</a>
       </div>
 
       <div id="headerSection" class="alert alert-info mb-3" role="alert">
@@ -224,7 +225,8 @@
     </main>
 
     <footer class="pt-1 my-2 text-secondary">
-      <a href="https://github.com/jiriteach/speedtest-server-finder">https://github.com/jiriteach/speedtest-server-finder</a>
+      <a
+        href="https://github.com/jiriteach/speedtest-server-finder">https://github.com/jiriteach/speedtest-server-finder</a>
     </footer>
 
   </div>
@@ -296,10 +298,17 @@
           });
 
           $("#inputGroup-sizing-lg").html("Keyword");
-          setTimeout(function(){$("#recommendedServerButton").removeClass('disabled');},4000);
+          setTimeout(function () { $("#recommendedServerButton").removeClass('disabled'); }, 4000);
 
         }
       })
+    }
+
+    function copyTextToClipboard(textToCopy) {
+      if (navigator?.clipboard?.writeText) {
+        return navigator.clipboard.writeText(textToCopy);
+      }
+      return Promise.reject('The Clipboard API is not available.');
     }
 
     $(document).ready(function () {
@@ -358,4 +367,5 @@
   </script>
 
 </body>
+
 </html>
