@@ -7,7 +7,7 @@ For use with `Speedtest Tracker` - https://github.com/alexjustesen/speedtest-tra
 Easier approach then using `speedtest-cli` to find recommended servers or the `server id` of a speedtest server.
 
 ## Working Example
-https://jiriteach.github.io/speedtest-server-finder/
+https://speed-sf.s7n.dev/
 
 ## Recommend Servers
 Provides a `top 10` list of servers as recommended by Oooka based on your IP address and provider.
@@ -22,4 +22,4 @@ Allows searching based on a `keyword` and provides a list of the `top 10` result
 Not associated with Ookla
 ```
 
-Built for educational purposes as part of learning the `Bootstrap` framework - https://getbootstrap.com/ and `Cloudflare Pages` - https://pages.cloudflare.com/.
+Built for educational purposes as part of learning the `Bootstrap` framework - https://getbootstrap.com/.
